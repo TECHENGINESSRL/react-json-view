@@ -8,7 +8,6 @@ export default class extends React.PureComponent {
     render() {
         const type_name = 'date';
         const {props} = this;
-        console.log('components/DataTypes/Date render() props.value', props.value);
 
         return (
             <div {...Theme(props.theme, 'date')}>
