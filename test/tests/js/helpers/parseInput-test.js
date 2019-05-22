@@ -21,7 +21,7 @@ describe("parseInput", function() {
     })
 
     it("parseInput date", function() {
-        expect(parseInput("5/22").type).to.equal("date")
+        expect(parseInput("2001-02-01").type).to.equal("date")
     })
 
     it("parseInput integer", function() {

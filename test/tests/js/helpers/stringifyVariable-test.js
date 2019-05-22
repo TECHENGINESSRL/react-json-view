@@ -77,7 +77,7 @@ describe("stringifyVariable", function() {
     })
 
     it("stringifyVariable date", function() {
-        let test = new Date()
+        let test = "2019-01-02 00:00:00"
         expect(stringifyVariable(test)).to.equal(test.toString())
     })
 
