@@ -1,4 +1,4 @@
-import moment from "moment/moment";
+import { DateConvertIn, DateIsValidInternal, DateIsValidExternal, DateConvertOut } from './dates';
 
 export default function parseInput(input) {
 
@@ -35,8 +35,8 @@ export default function parseInput(input) {
     }
 
     //run in case input was not serializable
-    input = input.toLowerCase();
-    switch (input) {
+    const inputLower = input.toLowerCase();
+    switch (inputLower) {
     case 'undefined': {
         return formatResponse('undefined', undefined);
     }
@@ -54,10 +54,11 @@ export default function parseInput(input) {
     }
     default: {
         //check to see if this is a date
-        input = Date.parse(input);
-        if (input) {
-            input =moment(input).format('YYYY-MM-DD hh:mm:ss')
-            return (formatResponse('date',input));
+        if (DateIsValidInternal(input)) {
+            return (formatResponse('date', DateConvertIn(input)));
+        }
+        if (DateIsValidExternal(input)) {
+            return (formatResponse('date', DateConvertOut(input)));
         }
     }
     }

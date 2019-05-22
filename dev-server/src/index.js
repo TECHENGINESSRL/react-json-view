@@ -4,11 +4,8 @@
 import React from "react"
 import ReactDom from "react-dom"
 
-import Moment from "moment"
-
 //import the react-json-view component (installed with npm)
 import JsonViewer from "./../../src/js/index"
-import moment from "moment/moment";
 
 //render 2 different examples of the react-json-view component
 ReactDom.render(
@@ -82,7 +79,7 @@ ReactDom.render(
             shouldCollapse={({ src, type }) =>
                 type === "object" &&
                 src.constructor &&
-                src.constructor.name === "Moment"
+                src.constructor.name === "DateTime"
             }
         />
 
@@ -179,30 +176,42 @@ ReactDom.render(
 //just a function to get an example JSON object
 function getExampleJson1() {
     return {
-        string: "this is a test string",
-        integer: 42,
-        empty_array: [],
-        empty_object: {},
-        array: [1, 2, 3, "test"],
-        float: -2.757,
-        undefined_var: undefined,
-        parent: {
-            sibling1: true,
-            sibling2: false,
-            sibling3: null,
-            isString: value => {
-                if (typeof value === "string") {
-                    return "string"
-                } else {
-                    return "other"
-                }
-            }
-        },
-        string_number: "1234",
-        date: Moment().format('YYYY-MM-DD hh:mm:ss'),
-        moment: Moment(),
-        regexp: /[0-9]/gi
-    }
+        '705503c3accc4a09b534f42b09dec251':{},
+        'dca48007ffd3408c847b6ccc723f7637':{},
+        '58225e5dce014c849de4193bc3b2e8dc':{},
+        'c0de219d65424f20a60385c90cb1c9f7':{
+            'FACTA':0,
+            'FACTC':0,
+            'FACTD':'1970-01-01T00:00:00.000Z',
+            'FACTNEW':false,
+            'FACDEC':0
+        }
+    };
+    // return {
+    //     string: "this is a test string",
+    //     integer: 42,
+    //     empty_array: [],
+    //     empty_object: {},
+    //     array: [1, 2, 3, "test"],
+    //     float: -2.757,
+    //     undefined_var: undefined,
+    //     parent: {
+    //         sibling1: true,
+    //         sibling2: false,
+    //         sibling3: null,
+    //         isString: value => {
+    //             if (typeof value === "string") {
+    //                 return "string"
+    //             } else {
+    //                 return "other"
+    //             }
+    //         }
+    //     },
+    //     string_number: "1234",
+    //     date: DateTime.local(),
+    //     moment: DateTime.local(),
+    //     regexp: /[0-9]/gi
+    // }
 }
 
 //and another a function to get an example JSON object

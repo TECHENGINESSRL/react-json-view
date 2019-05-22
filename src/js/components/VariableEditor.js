@@ -26,7 +26,6 @@ import { Edit, CheckCircle, RemoveCircle as Remove } from './icons';
 
 //theme
 import Theme from './../themes/getStyle';
-import moment from 'moment/moment';
 
 class VariableEditor extends React.PureComponent {
     constructor(props) {
@@ -212,7 +211,7 @@ class VariableEditor extends React.PureComponent {
         case 'undefined':
             return <JsonUndefined {...props} />;
         case 'date':
-            return <JsonDate value={moment(variable.value).format('YYYY-MM-DD hh:mm:ss')} {...props} />;
+            return <JsonDate value={variable.value} {...props} />;
         case 'regexp':
             return <JsonRegexp value={variable.value} {...props} />;
         default:
@@ -421,7 +420,7 @@ class VariableEditor extends React.PureComponent {
             case 'undefined':
                 return <JsonUndefined {...props} />;
             case 'date':
-                return <JsonDate value={moment(value).format('YYYY-MM-DD hh:mm:ss')} {...props} />;
+                return <JsonDate value={value} {...props} />;
             }
         }
     }

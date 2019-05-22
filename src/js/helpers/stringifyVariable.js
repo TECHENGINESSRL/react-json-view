@@ -1,4 +1,5 @@
 import { toType } from './util';
+import { DateConvert } from './dates';
 
 export default value => {
     const type = toType(value);
@@ -15,7 +16,7 @@ export default value => {
         string_value = value;
         break;
     case 'date':
-        string_value = value.toString();
+        string_value = DateConvert(value);
         break;
     case 'function':
         string_value = value.toString();

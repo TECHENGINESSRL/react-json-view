@@ -7,7 +7,6 @@ import Code from "./../helpers/Code"
 import "./../../style/scss/rjv-demo.scss"
 import "react-select/dist/react-select.css"
 import "react-github-button/assets/style.css"
-import moment from "moment/moment";
 
 //index entrypoint component
 export default class extends React.PureComponent {
@@ -475,7 +474,7 @@ export default class extends React.PureComponent {
                 "last-child": null
             },
             string_number: "1234",
-            date: moment().format('YYYY-MM-DD hh:mm:ss')
+            date: new Date()
         }
     }
 }
