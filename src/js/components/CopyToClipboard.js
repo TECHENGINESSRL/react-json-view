@@ -56,8 +56,7 @@ export default class extends React.PureComponent {
             clickCallback({
                 src: src,
                 name: name,
-                namespace: namespace,
-                name: namespace[namespace.length - 1]
+                namespace: namespace
             });
         });
     }
