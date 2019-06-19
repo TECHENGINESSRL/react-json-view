@@ -119,7 +119,7 @@ class VariableEditor extends React.PureComponent {
                         hidden={editMode}
                         src={variable.value}
                         clickCallback={enableClipboard}
-                        {...{ theme, namespace }}
+                        {...{ theme, namespace, name: variable.name }}
                     />
                 ) : null}
                 {onEdit !== false && editMode == false
