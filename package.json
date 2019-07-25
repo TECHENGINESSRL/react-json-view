@@ -1,7 +1,7 @@
 {
     "name": "tariff-react-json-view",
     "description": "Interactive react component for displaying javascript arrays and JSON objects.",
-    "version": "1.19.10",
+    "version": "1.19.11",
     "main": "dist/main.js",
     "dependencies": {
         "flux": "^3.1.3",
