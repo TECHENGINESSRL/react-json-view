@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon';
 
-export const DATE_FORMAT = 'yyyy-LL-dd HH:mm:ss';
+export const DATE_FORMAT = 'yyyy-LL-dd';
 
 export const DateIsValid = (input) => {
     return DateIsValidInternal(input) || 
